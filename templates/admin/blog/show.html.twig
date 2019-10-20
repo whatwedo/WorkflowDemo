@@ -8,7 +8,20 @@
     <p class="post-metadata">
         <span class="metadata"><i class="fa fa-calendar"></i> {{ post.publishedAt|localizeddate('long', 'medium', null, 'UTC') }}</span>
         <span class="metadata"><i class="fa fa-user"></i> {{ post.author.fullName }}</span>
+        <span class="metadata"><i class="fa fa-cogs"></i> {{ post.currentPlace }}</span>
     </p>
+
+    {% if workflows is defined %}
+        {% for workflow in workflows %}
+            {#        {{  dump(workflow) }}#}
+            {% for transition in workflow.transitions %}
+                {#            {{  dump(transition) }}#}
+                {% if workflow_can(entity, transition.name, workflow.name) %}
+                    <a href="{{ path('workflow_apply', { workflow: workflow.id, transition: transition.id, subjectClass: class(entity, true), subjectId: entity.id, ref: app.request.pathInfo }) }}" class="btn kt-subheader__btn-primary">{{ transition.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
 
     <div class="well">
         <p class="m-b-0"><strong>{{ 'label.summary'|trans }}</strong>: {{ post.summary }}</p>
