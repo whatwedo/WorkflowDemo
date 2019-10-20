@@ -5692,12 +5692,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/whatwedo/workflow-bundle.git",
-                "reference": "1d2a08b3c522d29a518d10934f793cbb06e8b5c5"
+                "reference": "94e7b44ebde6634eba9deb43c97b5542da423c56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/whatwedo/workflow-bundle/zipball/1d2a08b3c522d29a518d10934f793cbb06e8b5c5",
-                "reference": "1d2a08b3c522d29a518d10934f793cbb06e8b5c5",
+                "url": "https://api.github.com/repos/whatwedo/workflow-bundle/zipball/94e7b44ebde6634eba9deb43c97b5542da423c56",
+                "reference": "94e7b44ebde6634eba9deb43c97b5542da423c56",
                 "shasum": ""
             },
             "require": {
@@ -5726,7 +5726,7 @@
                 "source": "https://github.com/whatwedo/workflow-bundle/tree/master",
                 "issues": "https://github.com/whatwedo/workflow-bundle/issues"
             },
-            "time": "2019-10-20T19:26:54+00:00"
+            "time": "2019-10-20T20:52:35+00:00"
         },
         {
             "name": "zendframework/zend-code",

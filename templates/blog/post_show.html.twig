@@ -8,7 +8,9 @@
     <p class="post-metadata">
         <span class="metadata"><i class="fa fa-calendar"></i> {{ post.publishedAt|localizeddate('long', 'medium', null, 'UTC') }}</span>
         <span class="metadata"><i class="fa fa-user"></i> {{ post.author.fullName }}</span>
+        <span class="metadata"><i class="fa fa-cogs"></i> {{ post.currentPlace }}</span>
     </p>
+    {{ wwd_workflow_buttons(post) | raw }}
 
     {{ post.content|md2html }}
 
