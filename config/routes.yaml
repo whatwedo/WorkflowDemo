@@ -10,3 +10,7 @@ homepage:
     defaults:
         template: default/homepage.html.twig
         _locale: '%locale%'
+
+wwd_workflow:
+    resource: "@whatwedoWorkflowBundle/Controller/"
+    type: annotation

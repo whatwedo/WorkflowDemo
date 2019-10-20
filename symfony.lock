@@ -450,6 +450,18 @@
             "ref": "dd76e869a5d10fac29f4c0c02f8feaac613471ff"
         }
     },
+    "symfony/workflow": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "3b2f8ca32a07fcb00f899649053943fa3d8bbfb6"
+        },
+        "files": [
+            "config/packages/workflow.yaml"
+        ]
+    },
     "symfony/yaml": {
         "version": "4.2-dev"
     },
@@ -476,6 +488,9 @@
     },
     "twig/twig": {
         "version": "2.x-dev"
+    },
+    "whatwedo/workflow-bundle": {
+        "version": "dev-master"
     },
     "zendframework/zend-code": {
         "version": "3.3.1"

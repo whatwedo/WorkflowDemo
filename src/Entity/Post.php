@@ -15,6 +15,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use whatwedo\WorkflowBundle\Entity\Workflowable;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PostRepository")
@@ -31,7 +32,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
  * @author Yonel Ceruto <yonelceruto@gmail.com>
  */
-class Post
+class Post implements Workflowable
 {
     /**
      * Use constants to define configuration options that rarely change instead
@@ -64,6 +65,14 @@ class Post
      * @ORM\Column(type="string")
      */
     private $slug;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $currentPlace;
+
 
     /**
      * @var string
@@ -228,5 +237,15 @@ class Post
     public function getTags(): Collection
     {
         return $this->tags;
+    }
+
+    public function getCurrentPlace()
+    {
+        return $this->currentPlace;
+    }
+
+    public function setCurrentPlace($currentPlace)
+    {
+        $this->currentPlace = $currentPlace;
     }
 }
