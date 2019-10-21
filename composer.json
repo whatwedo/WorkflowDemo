@@ -54,6 +54,7 @@
             "php": "7.3.0"
         },
         "preferred-install": {
+            "whatwedo/workflow-bundle": "source",
             "*": "dist"
         },
         "sort-packages": true
