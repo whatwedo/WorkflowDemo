@@ -248,4 +248,9 @@ class Post implements Workflowable
     {
         $this->currentPlace = $currentPlace;
     }
+
+    public function getCurrentPlaceField(): string
+    {
+        return 'currentPlace';
+    }
 }
